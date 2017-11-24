@@ -12,3 +12,5 @@ app.get('/', (req, res) => {
 app.listen(3000, () => {
     console.log('server runnig at http://localhost:3000/');
 });
+
+module.exports = app;
