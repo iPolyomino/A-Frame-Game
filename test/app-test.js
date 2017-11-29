@@ -22,12 +22,11 @@ describe('Express Server Test', () => {
 describe('Application Test', () => {
     const url = 'http://localhost:3000/';
 
-    it('Should have object named "box".', (done) => {
+    it('Should have object named "box"', () => {
         const nightmare = new Nightmare();
         nightmare.goto(url).exists('#box').then( (exists) => {
             console.log(exists);
             expect(exists).to.be.true;
-            done();
         });
     });
 });
