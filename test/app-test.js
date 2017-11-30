@@ -25,7 +25,6 @@ describe('Application Test', () => {
     it('Should have object named "box"', () => {
         const nightmare = new Nightmare();
         nightmare.goto(url).exists('#box').then( (exists) => {
-            console.log(exists);
             expect(exists).to.be.true;
         });
     });
