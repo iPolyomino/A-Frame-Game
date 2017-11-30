@@ -27,6 +27,9 @@ class Cube {
     }
 
     animation(time) {
+        if (time == null) {
+            throw new Error('invalid value of time');
+        }
         this.object.setAttribute('position', `${this.x} ${Math.cos(time)} ${this.z}`);
     }
 
