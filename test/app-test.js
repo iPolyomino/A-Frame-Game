@@ -10,7 +10,7 @@ const expect = chai.expect;
 chai.use(chaiHttp);
 
 describe('Express Server Test', () => {
-    it('Should return status code 200', (done) => {
+    it('Should return status code 200', done => {
         chai.request(app).get('/').end( (err, res) => {
             expect(err).to.be.null;
             expect(res).to.have.status(200);
@@ -22,10 +22,13 @@ describe('Express Server Test', () => {
 describe('Application Test', () => {
     const url = 'http://localhost:3000/';
 
-    it('Should have object named "box"', () => {
+    it('Should have object named "box"', done => {
         const nightmare = new Nightmare();
-        nightmare.goto(url).exists('#box').then( (exists) => {
+        nightmare.goto(url).exists('#box').then( exists => {
             expect(exists).to.be.true;
+            done();
+        }).catch( error => {
+            done(error);
         });
-    });
+    }).timeout(10000);
 });
