@@ -12,7 +12,7 @@ chai.use(chaiHttp);
 
 describe('Express Server Test', () => {
     it('Should return status code 200', done => {
-        chai.request(app).get('/').end( (err, res) => {
+        chai.request(app).get('/').end((err, res) => {
             expect(err).to.be.null;
             expect(res).to.have.status(200);
             done();
@@ -25,12 +25,12 @@ describe('Application Test', () => {
 
     it('Should has title', done => {
         const nightmare = new Nightmare();
-        nightmare.goto(url).evaluate( () => {
+        nightmare.goto(url).evaluate(() => {
             return document.title;
-        }).end().then( result => {
+        }).end().then(result => {
             assert.strictEqual(result, 'A-Frame-Game');
             done();
-        }).catch( error => {
+        }).catch(error => {
             console.error('failed', error);
             done(error);
         });
