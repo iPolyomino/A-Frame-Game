@@ -9,7 +9,7 @@
         const coordinates = {
             x: Math.cos(angle) * 5,
             y: 0,
-            z: Math.sin(angle) * 5,
+            z: Math.sin(angle) * 5
         };
         const cube = new Cube(coordinates);
         cube.append();
