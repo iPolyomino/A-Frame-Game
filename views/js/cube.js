@@ -37,3 +37,5 @@ class Cube {
         this.object.parentNode.removeChild(this.object);
     }
 }
+
+module.exports = Cube;

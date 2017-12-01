@@ -1,5 +1,6 @@
 'use strict';
 
+const assert = require('assert');
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const Nightmare = require('nightmare');
@@ -22,13 +23,16 @@ describe('Express Server Test', () => {
 describe('Application Test', () => {
     const url = 'http://localhost:3000/';
 
-    it('Should have object named "box"', done => {
+    it('Should has title', done => {
         const nightmare = new Nightmare();
-        nightmare.goto(url).exists('#box').then( exists => {
-            expect(exists).to.be.true;
+        nightmare.goto(url).evaluate( () => {
+            return document.title;
+        }).end().then( result => {
+            assert.strictEqual(result, 'A-Frame-Game');
             done();
         }).catch( error => {
+            console.error('failed', error);
             done(error);
         });
-    }).timeout(10000);
+    });
 });
