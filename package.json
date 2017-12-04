@@ -1,0 +1,32 @@
+{
+  "name": "a-frame-game",
+  "version": "0.0.1",
+  "description": "WebVR Game",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha --timeout 10000 --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iPolyomino/A-Frame-Game.git"
+  },
+  "keywords": [
+    "A-Frame",
+    "WebVR"
+  ],
+  "author": "Hagi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iPolyomino/A-Frame-Game/issues"
+  },
+  "homepage": "https://github.com/iPolyomino/A-Frame-Game#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "mocha": "^4.0.1",
+    "nightmare": "^2.10.0"
+  }
+}
