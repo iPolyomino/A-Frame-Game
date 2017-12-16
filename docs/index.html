@@ -7,6 +7,15 @@
         <title>A-Frame-Game</title>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script> -->
         <script src="js/aframe-v0.7.1.min.js"></script>
+        <style type="text/css">
+            #score {
+                position:absolute;
+                left:20px;
+                bottom:5px;
+                font-size:1.5rem;
+                color: black;
+            }
+        </style>
     </head>
     <body>
         <a-scene>
@@ -16,11 +25,11 @@
             <a-camera position="0 0 0">
                 <a-cursor fuse="true" fuse-timeout='300'></a-cursor>
             </a-camera>
-            <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-            <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-            <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
             <a-sky src="#world"></a-sky>
         </a-scene>
+        <div id="score">
+            Score : <span id="my-score">0</span>
+        </div>
         <script src="js/cube.js"></script>
         <script src="js/control-objects.js"></script>
     </body>

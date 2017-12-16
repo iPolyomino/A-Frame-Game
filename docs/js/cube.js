@@ -1,23 +1,27 @@
 'use strict';
 
 class Cube {
-    constructor(coordinates) {
+    constructor(coordinates, time_shift) {
         if (coordinates.x == null || coordinates.y == null || coordinates.z == null) {
             throw new Error('coordinates are essential');
+        }
+
+        if (time_shift == null || isNaN(time_shift)) {
+            time_shift = 0;
         }
 
         this.x = coordinates.x;
         this.y = coordinates.y;
         this.z = coordinates.z;
 
+        this.time_shift = time_shift;
+
+        this.cycle = Math.random() + 0.5;
+
         const box = document.createElement('a-box');
         box.setAttribute('position', `${coordinates.x} ${coordinates.y} ${coordinates.z}`);
         box.setAttribute('color', '#4CC3D9');
         box.setAttribute('class', 'box');
-        box.addEventListener('click', () => {
-            console.log('HIT!!');
-            this.remove();
-        });
         this.object = box;
     }
 
@@ -30,7 +34,8 @@ class Cube {
         if (time == null) {
             throw new Error('invalid value of time');
         }
-        this.object.setAttribute('position', `${this.x} ${Math.cos(time)} ${this.z}`);
+        const object_time = (time - this.time_shift) * this.cycle;
+        this.object.setAttribute('position', `${this.x} ${Math.cos(object_time)} ${this.z}`);
     }
 
     remove() {
