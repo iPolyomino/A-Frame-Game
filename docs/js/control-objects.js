@@ -11,7 +11,9 @@
             y: 0,
             z: Math.sin(angle) * 5
         };
-        const cube = new Cube(coordinates);
+        const time_shift = Math.random() * 5;
+
+        const cube = new Cube(coordinates, time_shift);
         cube.append();
         objects.push(cube);
     }
