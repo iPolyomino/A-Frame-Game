@@ -20,10 +20,6 @@ class Cube {
         box.setAttribute('position', `${coordinates.x} ${coordinates.y} ${coordinates.z}`);
         box.setAttribute('color', '#4CC3D9');
         box.setAttribute('class', 'box');
-        box.addEventListener('click', () => {
-            console.log('HIT!!');
-            this.remove();
-        });
         this.object = box;
     }
 
