@@ -1,5 +1,7 @@
 # A-Frame-Game [![Build Status](https://travis-ci.org/iPolyomino/A-Frame-Game.svg?branch=master)](https://travis-ci.org/iPolyomino/A-Frame-Game)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/iPolyomino/A-Frame-Game.svg)](https://greenkeeper.io/)
+
 A-Frameを用いたゲーム
 
 ## Description
