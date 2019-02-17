@@ -1,7 +1,7 @@
 "use strict";
 
 export default class Cube {
-  constructor(coordinates, time_shift) {
+  constructor(coordinates, timeShift) {
     if (
       coordinates.x == null ||
       coordinates.y == null ||
@@ -10,15 +10,15 @@ export default class Cube {
       throw new Error("coordinates are essential");
     }
 
-    if (time_shift == null || isNaN(time_shift)) {
-      time_shift = 0;
+    if (timeShift == null || isNaN(timeShift)) {
+      timeShift = 0;
     }
 
     this.x = coordinates.x;
     this.y = coordinates.y;
     this.z = coordinates.z;
 
-    this.time_shift = time_shift;
+    this.timeShift = timeShift;
 
     this.cycle = Math.random() + 0.5;
 
@@ -41,10 +41,10 @@ export default class Cube {
     if (time == null) {
       throw new Error("invalid value of time");
     }
-    const object_time = (time - this.time_shift) * this.cycle;
+    const objectTime = (time - this.timeShift) * this.cycle;
     this.object.setAttribute(
       "position",
-      `${this.x} ${Math.cos(object_time)} ${this.z}`
+      `${this.x} ${Math.cos(objectTime)} ${this.z}`
     );
   }
 
