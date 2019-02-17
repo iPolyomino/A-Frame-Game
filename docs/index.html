@@ -1,48 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>A-Frame-Game</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
-        <!-- <script src="js/aframe-v0.7.1.min.js"></script> -->
-        <style type="text/css">
-            div#time {
-                position: absolute;
-                left: 20px;
-                top: 5px;
-                font-size: 1.5rem;
-                color: black;
-            }
-            div#score {
-                position: absolute;
-                left: 20px;
-                bottom: 5px;
-                font-size: 1.5rem;
-                color: black;
-            }
-        </style>
-    </head>
-    <body>
-        <a-scene>
-            <a-assets>
-                <img id="world" src="image/world.png">
-            </a-assets>
-            <a-camera position="0 0 0">
-                <a-cursor fuse="true" fuse-timeout='300'></a-cursor>
-            </a-camera>
-            <a-sky src="#world"></a-sky>
-        </a-scene>
-        <div id="time">
-            Time :
-            <span id="time-limit">15</span>
-        </div>
-        <div id="score">
-            Score :
-            <span id="my-score">0</span>
-        </div>
-        <script src="js/cube.js"></script>
-        <script src="js/control-objects.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>A-Frame-Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
+    <style type="text/css">
+      div#time {
+        position: absolute;
+        left: 20px;
+        top: 5px;
+        font-size: 1.5rem;
+        color: black;
+      }
+      div#score {
+        position: absolute;
+        left: 20px;
+        bottom: 5px;
+        font-size: 1.5rem;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets> <img id="world" src="image/world.png" /> </a-assets>
+      <a-camera position="0 0 0">
+        <a-cursor fuse="true" fuse-timeout="300"></a-cursor>
+      </a-camera>
+      <a-sky src="#world"></a-sky>
+    </a-scene>
+    <div id="time">Time : <span id="time-limit">15</span></div>
+    <div id="score">Score : <span id="my-score">0</span></div>
+    <script src="js/control-objects.js" type="module"></script>
+  </body>
 </html>
