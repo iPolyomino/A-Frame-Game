@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/iPolyomino/A-Frame-Game#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.4"
   },
   "devDependencies": {
-    "eslint": "^5.0.0",
+    "eslint": "^5.14.0",
     "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-html": "^5.0.3",
     "eslint-plugin-prettier": "^3.0.1",
