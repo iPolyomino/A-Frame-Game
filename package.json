@@ -4,7 +4,8 @@
   "description": "WebVR Game",
   "main": "app.js",
   "scripts": {
-    "lint": "eslint --ext .html,.js --ignore-path .gitignore ."
+    "lint": "eslint --ext .html,.js --ignore-path .gitignore .",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
