@@ -7,14 +7,14 @@ let timeLimit = 15;
 let time = 0;
 let score = 0;
 
-const createObject = coordinates => {
+const createObject = (coordinates) => {
   const timeShift = Math.random() * 5;
   const cube = new Cube(coordinates, timeShift);
   cube.object.addEventListener("click", () => {
     if (timeLimit <= 0) {
       return;
     }
-    objects = objects.filter(obj => {
+    objects = objects.filter((obj) => {
       return obj !== cube;
     });
     cube.remove();
@@ -46,7 +46,7 @@ const countdownTimer = () => {
   } else {
     requestAnimationFrame(render);
   }
-  objects.forEach(object => {
+  objects.forEach((object) => {
     object.animation(time);
   });
   time += 0.1;
@@ -58,7 +58,7 @@ for (let i = 0; i < objectsCount; i++) {
   const coordinates = {
     x: Math.cos(angle) * 5,
     y: 0,
-    z: Math.sin(angle) * 5
+    z: Math.sin(angle) * 5,
   };
   createObject(coordinates);
 }
